@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         staticDispatchTest()
+        tableDispatchTest()
     }
 
     
@@ -28,6 +29,20 @@ class ViewController: UIViewController {
         
         let albaSecondClassInstance = AlbaSecondClass()
         albaSecondClassInstance.play() // Static
+    }
+    
+    
+    // MARK: TableDispatch
+    
+    private func tableDispatchTest() {
+        let fooInstance: FooProtocol = Foo()
+        fooInstance.play() // Table
+        
+        let childrenInstance = SomeChildren()
+        childrenInstance.play() // Table
+        
+        let albaSecondClassInstance = AlbaSecondClass()
+        albaSecondClassInstance.play() // Table
     }
 }
 
