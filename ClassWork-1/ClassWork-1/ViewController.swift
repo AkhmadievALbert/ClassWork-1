@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         
         staticDispatchTest()
         tableDispatchTest()
+        nsObjectDispatchDispatchTest()
     }
 
     
@@ -43,6 +44,20 @@ class ViewController: UIViewController {
         
         let albaSecondClassInstance = AlbaSecondClass()
         albaSecondClassInstance.play() // Table
+    }
+    
+    
+    // MARK: NSObjectDispatch
+    
+    private func nsObjectDispatchDispatchTest() {
+        let firstInstance = FirstObject()
+        firstInstance.play() // Static
+        
+        let secondInstance = SecondObject()
+        secondInstance.play() // Table
+        
+        let thirdInstance = ThirdObject()
+        thirdInstance.play() // Message
     }
 }
 
